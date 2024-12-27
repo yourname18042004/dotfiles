@@ -1,0 +1,56 @@
+$foreground: #ffffff;
+$grey: #aaaaaa;
+$foreground-alt: #465059;
+$background: #0e1419;
+$black: #000000;
+$red: #ff6565;
+$green: #b8cc52;
+$yellow: #e6c446;
+$blue: #68d4ff;
+$magenta: #ffa3aa;
+$cyan: #36a3d9;
+$white: #ffffff;
+* {
+  all: unset;
+  font-size:15px;
+}
+
+scale trough {
+  all: unset;
+  background-color: $grey;
+  border-radius: 50px;
+  min-height: 100px;
+  min-width: 10px;
+  margin: 0 20px 0 20px;
+}
+
+scale trough highlight {
+  all: unset;
+  background-color: $blue;
+  border-radius: 10px;
+}
+.bar {
+  background: rgba(19,39,61,0.6);   
+  border: 2px solid #00a4a0;
+  border-radius: 14px 14px 14px 14px;
+}
+
+.workspace {
+  margin: 5px;
+  padding: 0px;
+  border: 1px solid #00ceff;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.background {
+  background: #444;
+}
+
+.volumeicon {
+  margin: 5px;
+  font-family: "Font Awesome 6 Free";
+  font-size: 2.0em;
+  padding: 0px;
+  border: 1px solid #00ceff;
+  border-radius: 10px 10px 10px 10px;
+} 

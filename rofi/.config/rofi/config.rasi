@@ -1,0 +1,34 @@
+// Default Rofi Configuration
+rofi {
+    modi: "run,window,ssh";
+    terminal: "alacritty";
+    font: "Monospace 12";
+    background-color: #282828;
+    foreground-color: #ebdbb2;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #458588;
+    location: 0; // Top-left position
+    padding: 5px;
+    width: 60%;
+    height: 30;
+}
+
+window {
+    width: 50%;
+    height: 20;
+    border: 2px solid;
+}
+
+listview {
+    lines: 10;
+    fixed-height: true;
+}
+
+modi {
+    run: "Run Application";
+    window: "Window Switcher";
+    ssh: "SSH Launcher";
+}
+
+

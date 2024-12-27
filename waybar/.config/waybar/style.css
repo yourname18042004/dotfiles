@@ -1,0 +1,18 @@
+* {
+    background: #282a36;
+    color: #f8f8f2;
+    font-family: "Iosevka", "Roboto", sans-serif;
+}
+
+#clock {
+    font-size: 1.2em;
+}
+
+#battery {
+    color: #ff79c6;
+}
+
+#network {
+    color: #50fa7b;
+}
+
