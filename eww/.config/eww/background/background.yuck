@@ -1,0 +1,146 @@
+(defpoll cpuvalue :interval "1s" "background/scripts/getcpuinfo.sh")
+(defpoll ramvalue :interval "1s" "background/scripts/getraminfo.sh")
+(defpoll batteryvalue :interval "1s" "background/scripts/getbatteryinfo.sh")
+(defwindow info 
+    :class "infor"
+    :monitor 0
+    :geometry (geometry 
+                    :x 15
+                    :y 608
+                    :width "20%"
+                    :height "15%") 
+    :stacking "bg"
+    :exclusive false 
+    :focursable false 
+    (box
+        :orientation "h"
+        :halign "end"
+        :valign "end"
+        :spacing 30
+        :class "biggest"
+        :space-evenly false
+        (box
+            :halign "start"
+            :valign "end"
+            :orientation "v"
+            :class "control"
+            :width 150
+            :height 150
+            (box 
+                :orientation "h"
+                (button 
+                    :class "b1" 
+                    "1"
+                )
+                (button 
+                    :class "b2" 
+                    "2"
+                )
+            )
+            (box 
+                :orientation "h"
+                (button 
+                    :class "b3" 
+                    "3"
+                )
+                (button 
+                    :class "b4" 
+                    "4"
+                )
+            )
+        )
+
+        (box
+         :orientation "h"
+         :spacing 0
+         :halign "start"
+         :valign "end"
+         (circular 
+          :name "CPU" 
+          :valueinfo {cpuvalue})
+         (circular 
+          :name "RAM" 
+          :valueinfo {ramvalue})
+         (circular 
+          :name "BATTERY" 
+          :valueinfo {batteryvalue})
+        )
+    )
+)
+(defwindow background
+    :class "background"
+    :monitor 0
+    :geometry (geometry 
+                    :width "100%"
+                    :height "100%") 
+    :stacking "bg"
+    :exclusive false 
+    :focursable false 
+    (image
+        :path "images/Exclude.png"
+        :preserve-aspect-ratio true
+        :image-width 1380
+        :image-height 768
+        )
+)
+
+(defwindow calendar
+    :class "backg"
+    :monitor 0
+    :geometry (geometry 
+                    :x 890
+                    :y 483
+                    :width 100
+                    :height 100
+                    ) 
+    :stacking "bg"
+    :exclusive false 
+    :focursable false 
+    (box
+        :class "boxcalendar"
+        :width 50
+        :height 200
+        :valign "end"
+        (calendar)
+    )
+)
+
+(defwindow background1
+    :class "background1"
+    :monitor 0
+    :geometry (geometry 
+                    :x 782
+                    :y 460
+                    :width "5%"
+                    :height "5%") 
+    :stacking "bg"
+    :exclusive false 
+    :focursable false 
+    (image
+        :path "images/Subtract.png"
+        :preserve-aspect-ratio true
+        )
+)
+
+
+(defwidget circular [name valueinfo]
+    (box
+        :class "box"
+        :orientation "vertical"
+        :valign "end"
+        :spacing 5
+        :height 100
+        :width 100
+        :space-evenly false
+        (circular-progress
+            :class "circular_${name}"
+            :value {valueinfo}
+            :width 90
+            :height 90
+            :start-at 37.5
+            :thickness 15
+            "${valueinfo}%"
+        )
+        "${name}"
+    )
+)

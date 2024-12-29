@@ -1,0 +1,66 @@
+.background {
+  animation:  2s ease-in-out infinite;
+}
+
+.circular_CPU{
+  color: #fff264;
+  background: #333;
+}
+.circular_RAM{
+  color: #ff55bb;
+  background: #333;
+}
+.circular_BATTERY{
+  color: #68bbff;
+  background: #333;
+}
+
+.boxcalendar {
+  background: #000;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.label {
+  font-family: "Inter", sans-serif;
+  font-size: 1.45em;
+  background: #f00;
+}
+
+
+
+.control {
+  background: #000;
+  border-radius: 5px 50% 5px 50%;
+}
+.b1 {
+  background: #fff264;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 5px 5px 5px 5px;
+}
+.b2 {
+  background: #fb41b0;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-top: 10;
+  border-radius: 5px 100px 5px 5px;
+}
+.b3 {
+  background: #45f2f2;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 5px 5px 5px 100px;
+}
+.b4 {
+  background: #73fe73;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px 5px 5px 5px;
+}

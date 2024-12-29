@@ -1,3 +1,5 @@
+@import "background/background.scss";
+
 $foreground: #ffffff;
 $grey: #aaaaaa;
 $foreground-alt: #465059;
@@ -30,8 +32,8 @@ scale trough highlight {
   border-radius: 10px;
 }
 .bar {
-  background: rgba(19,39,61,0.6);   
-  border: 2px solid #00a4a0;
+  background: #8ED1EE;
+  border: 2px solid #8ED1EE;
   border-radius: 14px 14px 14px 14px;
 }
 
@@ -42,9 +44,6 @@ scale trough highlight {
   border-radius: 10px 10px 10px 10px;
 }
 
-.background {
-  background: #444;
-}
 
 .volumeicon {
   margin: 5px;

@@ -1,0 +1,28 @@
+(deflisten music :initial ""
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
+
+(defwindow musicwindow 
+    :monitor 0
+    :geometry (geometry 
+        :x "4%"
+        :y "3%"
+        :width 200
+        :anchor "top center")
+    :stacking "bg"
+    :exclusive false 
+    :focursable true 
+    (music)
+)
+
+(defwidget music []
+  (box 
+    (label :class "music"
+        :wrap true
+        :truncate true
+        :limit-width 30
+        :show-truncated true
+        :justify "left"
+        :text {music != "" ? "🎵${music}" : ""})
+  )
+)
+
