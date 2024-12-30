@@ -12,9 +12,6 @@ return {
                 ensure_installed = { 
                     "lua_ls", 
                     "jdtls", 
-
-                    -- Web development
-                                        
                 },
                 automatic_installation = true,
             })
@@ -28,6 +25,7 @@ return {
             lspconfig.lua_ls.setup({})
             lspconfig.jdtls.setup({})
             lspconfig.clangd.setup({})
+            lspconfig.tsserver.setup({})
 
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
