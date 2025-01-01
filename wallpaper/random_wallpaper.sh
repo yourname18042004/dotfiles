@@ -9,15 +9,12 @@ if [ ! -d "$WALLPAPER_DIR" ]; then
     exit 1
 fi
 
-# Thời gian giữa các lần thay đổi hình nền (đơn vị: giây)
-INTERVAL=300
 
 # Khởi tạo swww daemon nếu chưa chạy
 if ! pgrep -x "swww" > /dev/null; then
     swww init
 fi
 
-while true; do
     # Chọn ngẫu nhiên một file ảnh từ thư mục ảnh
     IMAGE=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" \) | shuf -n 1)
     
@@ -30,6 +27,3 @@ while true; do
     # Đặt hình nền với hiệu ứng mờ dần (fade)
     swww img "$IMAGE" --transition-type grow --transition-duration 2 &&  wal -i "$IMAGE" 
 
-    # Đợi đến lần thay đổi tiếp theo
-    sleep $INTERVAL
-done

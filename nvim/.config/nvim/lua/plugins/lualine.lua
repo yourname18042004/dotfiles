@@ -5,7 +5,8 @@ return{
             options = {
                 --theme = "gruvbox"
                 --theme = "moonbow"
-                theme = "dracula"
+                --theme = "dracula"
+                theme = "solarized-osaka"
             }
         })
     end

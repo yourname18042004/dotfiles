@@ -1,4 +1,4 @@
-@import "background/background.scss";
+@import 'background/background.scss';
 
 $foreground: #ffffff;
 $grey: #aaaaaa;
@@ -14,7 +14,7 @@ $cyan: #36a3d9;
 $white: #ffffff;
 * {
   all: unset;
-  font-size:15px;
+  font-size: 15px;
 }
 
 scale trough {
@@ -32,8 +32,8 @@ scale trough highlight {
   border-radius: 10px;
 }
 .bar {
-  background: #8ED1EE;
-  border: 2px solid #8ED1EE;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid #8ed1ee;
   border-radius: 14px 14px 14px 14px;
 }
 
@@ -44,12 +44,11 @@ scale trough highlight {
   border-radius: 10px 10px 10px 10px;
 }
 
-
 .volumeicon {
   margin: 5px;
-  font-family: "Font Awesome 6 Free";
-  font-size: 2.0em;
+  font-family: 'Font Awesome 6 Free';
+  font-size: 2em;
   padding: 0px;
   border: 1px solid #00ceff;
   border-radius: 10px 10px 10px 10px;
-} 
+}
