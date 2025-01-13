@@ -1,0 +1,15 @@
+(defwindow control
+  :monitor 0
+  :geometry 
+    (geometry 
+      :width '20%'
+      :height "20%"
+      :anchor "center")
+  :stacking "fg"
+  :exclusive false 
+  :focursable true 
+  (box 
+    :class "control"
+    "Hello"
+  )
+)

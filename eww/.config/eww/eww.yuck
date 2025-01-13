@@ -1,6 +1,7 @@
 (defvar eww "/home/giapwibu/eww/target/release/eww")
 (include "music/music.yuck")
 (include "background/background.yuck")
+(include "control/control.yuck")
 
 (defwindow bar
             :class "bar"
@@ -11,7 +12,7 @@
                                :height "65%"
                                :anchor "left center")
             :stacking "fg"
-            :exclusive false 
+            :exclusive true 
             :focursable true 
             (box :orientation "vertical"
                 (workspaces1 :monitor "eDP-1")
@@ -72,7 +73,7 @@
             )
             (button
                 :class "volumeicon"
-             "Vol"
+                "VOL"
             )
         )
     )
@@ -104,7 +105,8 @@
                 )
             )
             (button
-             "Bright"
+                :class "volumeicon"
+             "BRIGHT"
             )
         )
     )
@@ -137,7 +139,8 @@
 ; ================== time date ==============================
 (defwidget phone []
     (button 
+        :class "volumeicon"
         :onclick "scripts/phone.sh"
-        "phone"
+        "PHONE"
     )
 )

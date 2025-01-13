@@ -32,8 +32,8 @@ vim.opt.ignorecase = true --che do khong phan biet chu hoa chu thuong
 
 vim.opt.smarttab = true
 vim.opt.breakindent = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 
 vim.opt.ai = true -- tu dong thut vao le 
 vim.opt.si = true -- tu dong thut le theo cu phap cua ngon ngu lap trinh

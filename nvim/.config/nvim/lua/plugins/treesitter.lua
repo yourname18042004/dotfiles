@@ -14,7 +14,9 @@ return{
                 "c", 
                 "cpp", 
                 "c_sharp", 
-                "sql"},
+                "sql",
+                "dart",
+      },
       highlight = { enable = true },
       indent = { enable = true }
     })

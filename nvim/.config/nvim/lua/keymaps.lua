@@ -31,8 +31,8 @@ keymap.set('i', '<C-k>', '<up>')
 keymap.set('i', '<C-j>', '<down>')
 keymap.set('i', '<C-l>', '<right>')
 
-keymap.set( 'n', "<Tab>", "gt" )
-keymap.set( 'n', "<S-Tab>", "gT" )
+--keymap.set( 'n', "<Tab>", "gt" )
+--keymap.set( 'n', "<S-Tab>", "gT" )
 
 --move
 keymap.set('n', "<C-S-k>", "kzz")
