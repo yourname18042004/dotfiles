@@ -1,9 +1,7 @@
-@import 'background/background.scss';
-
 $foreground: #ffffff;
 $grey: #aaaaaa;
 $foreground-alt: #465059;
-$background: #0e1419;
+$background: #000000;
 $black: #000000;
 $red: #ff6565;
 $green: #b8cc52;
@@ -14,40 +12,15 @@ $cyan: #36a3d9;
 $white: #ffffff;
 * {
   all: unset;
-  font-size: 15px;
 }
 
-scale trough {
-  all: unset;
-  background-color: $grey;
-  border-radius: 50px;
-  min-height: 100px;
-  min-width: 10px;
-  margin: 0 20px 0 20px;
-}
-
-scale trough highlight {
-  all: unset;
-  background-color: $blue;
-  border-radius: 10px;
-}
-.bar {
-  background: rgba(0, 0, 0, 0.4);
-  border: 2px solid #8ed1ee;
-  border-radius: 14px 14px 14px 14px;
-}
-
-.workspace {
-  margin: 5px;
-  padding: 0px;
-  border: 1px solid #00ceff;
-  border-radius: 10px 10px 10px 10px;
-}
-
-.volumeicon {
-  margin: 5px;
-  font-size: 2em;
-  padding: 0px;
-  border: 1px solid #00ceff;
-  border-radius: 10px 10px 10px 10px;
-}
+@import 'scss/bar.scss';
+@import 'scss/corner.scss';
+@import 'scss/volume.scss';
+@import 'scss/bright.scss';
+@import 'scss/workspace.scss';
+@import 'scss/phone.scss';
+@import 'scss/clock.scss';
+@import 'scss/network.scss';
+@import 'scss/control.scss';
+@import 'scss/info.scss';

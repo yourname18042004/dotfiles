@@ -1,0 +1,56 @@
+.topside_edge {
+  background: $background;
+}
+
+.bottomside_edge {
+  background: $background;
+}
+
+.leftside_edge {
+  background: $background;
+}
+
+.rightside_edge {
+  background: $background;
+}
+
+.center1 {
+  background: $background;
+  border-radius: 0px 0px 13px 13px;
+}
+.center_left {
+  background: rgba(0, 0, 0, 0);
+  padding: 10px;
+  border-radius: 100%;
+  box-shadow: 10px -10px 0px 0px $background;
+}
+.center_right {
+  background: rgba(0, 0, 0, 0);
+  padding: 5px;
+  border-radius: 100%;
+  box-shadow: -10px -10px 0px 0px $background;
+}
+.cornerTL {
+  background: rgba(0, 0, 0, 0);
+  padding: 25px;
+  border-radius: 100%;
+  box-shadow: -25px -25px 0px 0px $background;
+}
+.cornerTR {
+  background: rgba(0, 0, 0, 0);
+  padding: 25px;
+  border-radius: 100%;
+  box-shadow: 25px -25px 0px 0px $background;
+}
+.cornerBL {
+  background: rgba(0, 0, 0, 0);
+  padding: 25px;
+  border-radius: 100%;
+  box-shadow: -25px 25px 0px 0px $background;
+}
+.cornerBR {
+  background: rgba(0, 0, 0, 0);
+  padding: 25px;
+  border-radius: 100%;
+  box-shadow: 25px 25px 0px 0px $background;
+}

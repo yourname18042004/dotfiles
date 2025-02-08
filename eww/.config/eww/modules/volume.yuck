@@ -1,0 +1,32 @@
+(defpoll volumevalue :interval "1s" "scripts/getvolume.sh")
+(defvar setvolum false)
+(defwidget volume []
+	(eventbox
+        :class "eventbox"
+        :onhover "${eww} update setvolum=true"	
+		:onhoverlost "${eww} update setvolum=false"
+	    (box
+            :orientation "h"
+            :space-evenly "false"
+            (revealer
+                :transition "slideright"
+                :reveal setvolum
+                :duration "550ms"
+                (scale 
+                    :class "volume"
+                    :value volumevalue
+                    :orientation "h"
+                    :flipped true
+                    :tooltip "Volume: ${volumevalue}%"
+                    :max 100
+                    :min 0
+                    :onchange "pactl set-sink-volume @DEFAULT_SINK@ {}%"
+                )
+            )
+            (button
+                :class "volumeicon"
+                "󰕾 "
+            )
+        )
+    )
+)

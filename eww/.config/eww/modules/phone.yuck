@@ -1,0 +1,7 @@
+(defwidget phone []
+    (button 
+        :class "phoneicon"
+        :onclick "scripts/phone.sh"
+        ""
+    )
+)

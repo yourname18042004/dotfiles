@@ -18,7 +18,18 @@ return{
                 "dart",
       },
       highlight = { enable = true },
-      indent = { enable = true }
+      indent = { enable = true },
+      filetype = {
+        dart = {
+          function()
+            return {
+              exe = "dart",
+              args = { "format", "--fix", "-" },
+              stdin = true
+            }
+          end
+        }
+      }
     })
   end 
 }

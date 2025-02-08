@@ -29,6 +29,7 @@ return {
             lspconfig.tsserver.setup({})
             lspconfig.csharp_ls.setup({})
             lspconfig.dartls.setup({})
+            lspconfig.pylsp.setup({})
 
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})

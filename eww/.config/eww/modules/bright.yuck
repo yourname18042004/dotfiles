@@ -1,0 +1,31 @@
+(defpoll brightvalue :interval "1s" "scripts/getbrightness.sh")
+(defvar setbright false)
+(defwidget bright []
+	(eventbox
+        :onhover "${eww} update setbright=true"	
+		:onhoverlost "${eww} update setbright=false"
+	    (box 
+            :orientation "h"
+            :space-evenly "false"
+            (revealer
+                :transition "slideright"
+                :reveal setbright
+                :duration "550ms"
+                (scale 
+                    :class "volume"
+                    :value brightvalue
+                    :orientation "h"
+                    :flipped true
+                    :tooltip "Bright: ${brightvalue}%"
+                    :max 100
+                    :min 10
+                    :onchange "brightnessctl set {}%"
+                )
+            )
+            (button
+                :class "brighticon"
+             "󰃟 "
+            )
+        )
+    )
+)

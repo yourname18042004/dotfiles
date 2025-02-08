@@ -1,0 +1,64 @@
+.boxinfo {
+  background-color: #000;
+  border-radius: 0px 0px 0px 20px;
+}
+
+.graphcpu {
+  color: #ff55bb;
+}
+.graphtemperture {
+  color: #68bbff;
+}
+
+.scrollinfo {
+  margin: 10;
+}
+
+.boxes {
+  margin-top: 10;
+  margin-left: 20;
+  margin-right: 20;
+  border-radius: 30px 30px 30px 30px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.boxesgraph {
+  margin-top: 10;
+  margin-left: 20;
+  margin-right: 20;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 30px 30px 30px 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.circular_CPU {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #fff264;
+  background: #333;
+}
+.circular_RAM {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #ff55bb;
+  background: #333;
+}
+.circular_BATTERY {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #68bbff;
+  background: #333;
+}
+.infoCornerTL {
+  background: rgba(0, 0, 0, 0);
+  padding: 25px;
+  border-radius: 100%;
+  box-shadow: 25px -25px 0px 0px $background;
+}
+.infoCornerBR {
+  background: rgba(0, 0, 0, 0);
+  padding: 25px;
+  border-radius: 100%;
+  box-shadow: 25px -25px 0px 0px $background;
+}

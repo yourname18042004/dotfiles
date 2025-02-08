@@ -1,0 +1,97 @@
+(defwindow topside_edge
+  :class "topside_edge"
+  :exclusive true
+  :monitor 0
+  :geometry (geometry 
+              :width "100%"
+              :height 20
+              :anchor "center top")
+  (box :class "topsideedge")
+)
+
+(defwindow bottomside_edge
+  :class "bottomside_edge"
+  :exclusive true
+  :monitor 0
+  :geometry (geometry 
+              :width "100%"
+              :height 5
+              :anchor "center bottom")
+  (box :class "topsideedge")
+)
+
+(defwindow leftside_edge
+  :class "leftside_edge"
+ :exclusive true
+ :exclusive true
+  :monitor 0
+  :geometry (geometry 
+              :height "100%"
+              :width 5
+              :anchor "center left")
+  (box :class "leftside edge")  
+)
+
+(defwindow rightside_edge
+  :class "rightside_edge"
+ :exclusive true
+  :monitor 0
+  :geometry (geometry 
+              :height "100%"
+              :width 5
+              :anchor "center right")
+  (box :class "rightside edge")  
+)
+
+
+(defwindow center 
+ :exclusive false 
+  :monitor 0
+  :geometry (geometry 
+              :width "20%"
+              :height 16
+              :anchor "center top")
+  (box 
+    :halign "center"
+    :space-evenly false
+
+    (box :class "center_left"
+          :width 20
+          :height 15)
+    (box :class "center1"
+          :width 200
+          :height 2)
+    (box :class "center_right"
+          :width 20
+          :height 15)
+  )  
+)
+
+(defwindow corner_top_left 
+  :stacking "bg"
+  :monitor 0
+  :geometry (geometry 
+              :anchor "top left")
+  (box :class "cornerTL")  
+)
+(defwindow corner_top_right 
+  :stacking "bg"
+  :monitor 0
+  :geometry (geometry 
+              :anchor "top right")
+  (box :class "cornerTR")  
+)
+(defwindow corner_bottom_left 
+  :stacking "bg"
+  :monitor 0
+  :geometry (geometry 
+              :anchor "bottom left")
+  (box :class "cornerBL")  
+)
+(defwindow corner_bottom_right 
+  :stacking "bg"
+  :monitor 0
+  :geometry (geometry 
+              :anchor "bottom right")
+  (box :class "cornerBR")  
+)

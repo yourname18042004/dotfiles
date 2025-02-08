@@ -1,0 +1,15 @@
+(deflisten workspaces :initial '{\"DP-2\": [], \"HDMI-A-1\": [], \"eDP-1\": []}' "./scripts/workspace.py")
+
+(defwidget workspaces1 [monitor]
+    (box  
+        
+        :orientation "h" 
+        :class "workspaces1"
+        :valign "start"
+        :spacing 10
+    (for wsp in {workspaces[monitor]}
+        (button :class "workspace"
+              :class "${wsp.class}" 
+              :onclick "hyprctl dispatch workspace ${wsp.name}"
+          (label :text "${wsp.icon}")
+        ))))

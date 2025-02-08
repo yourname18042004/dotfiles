@@ -1,0 +1,78 @@
+(defwindow bar
+            :monitor 0
+            :geometry (geometry :x "15%"
+                               :y 0
+                               :width "100%"
+                               :height 20
+                               :anchor "top center")
+            :stacking "bg"
+            :exclusive true 
+            :focursable true 
+            (box :orientation "h"
+                :halign "center"
+                :valign "center"
+                :space-evenly false
+                (box
+                    :width 500
+                    :height 20
+                    :class "l"
+                    (box 
+                      :halign "start" 
+                      :space-evenly false
+                      :spacing 10
+                      (clock)
+                      (label :text "|")
+                      (network)
+                    )
+                )
+                (box 
+                    :width 300
+                    :height 20
+                    :class "c"
+                    (box
+                      :class "boxWorkspace"
+                     :halign "center"
+                     :space-evenly false
+                     (workspaces1 :monitor "eDP-1")
+                    )
+                )
+                (box
+                    :width 500
+                    :height 20
+                    :class "r"
+                    :orientation "h"
+                    (box
+                      :space-evenly false
+                      :halign "end"
+                      :spacing 5
+                      (box
+                        :class "boxVolume"
+                        :halign "center"
+                        :space-evenly false
+                        (volume)
+                      )
+                      (label :text "|")
+                      (box
+                        :class "boxBrightness"
+                        :halign "center"
+                        :space-evenly false
+                        (bright)
+                      )
+                      (label :text "|")
+                      (box
+                        :class "boxPhone"
+                        :halign "center"
+                        :space-evenly false
+                        (phone)
+                      )
+                    )
+                )
+            )
+  )
+
+(include "modules/volume.yuck")
+(include "modules/workspace.yuck")
+(include "modules/bright.yuck")
+(include "modules/phone.yuck")
+(include "modules/clock.yuck")
+(include "modules/network.yuck")
