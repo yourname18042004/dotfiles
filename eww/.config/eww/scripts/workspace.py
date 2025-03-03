@@ -30,7 +30,7 @@ def generate_workspace_data() -> dict:
                 "name": wsp["name"],
                 "monitor": monitor,
                 "class": "focused",
-                "icon": "󰋑",
+                "icon": "󰖌",
                 "title": wsp.get('lastwindowtitle', 'N/A')
             }
         else:
@@ -38,7 +38,7 @@ def generate_workspace_data() -> dict:
                 "name": wsp["name"],
                 "monitor": monitor,
                 "class": "visible",
-                "icon": "",
+                "icon": "󰸊",
                 "title": wsp.get('lastwindowtitle', 'N/A')
             }
 

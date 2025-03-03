@@ -16,7 +16,13 @@ return{
           ["ui-select"] = {
             require("telescope.themes").get_dropdown {}
           }
-        }
+        },
+        defaults = {
+          layout_strategy = "vertical", -- hoặc "center" tùy bạn
+          layout_config = {
+            preview_cutoff = 0, -- Hiển thị preview đầy đủ
+          },
+  },
       }
       require("telescope").load_extension("ui-select")
     end

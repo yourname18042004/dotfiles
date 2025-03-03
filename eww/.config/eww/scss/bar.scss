@@ -1,13 +1,19 @@
 .bar {
   background: #000;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.bar.visible {
+  opacity: 1;
 }
 
 .boxWorkspace {
   margin: 5;
   padding-left: 10;
-  padding-right: 14;
+  padding-right: 10;
   border-radius: 30px 30px 30px 30px;
-  background: #3e1d33;
+  background: $cyan;
 }
 
 .boxVolume {
@@ -15,19 +21,19 @@
   padding-left: 10;
   padding-right: 6;
   border-radius: 30px 30px 30px 30px;
-  background: #3e1d33;
+  background: $cyan;
 }
 .boxBrightness {
   margin: 5;
   padding-left: 10;
   padding-right: 6;
   border-radius: 30px 30px 30px 30px;
-  background: #3e1d33;
+  background: $cyan;
 }
 .boxPhone {
   margin: 5;
   padding-left: 12;
   padding-right: 12;
   border-radius: 30px 30px 30px 30px;
-  background: #3e1d33;
+  background: $cyan;
 }

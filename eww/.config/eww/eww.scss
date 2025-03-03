@@ -8,7 +8,7 @@ $green: #b8cc52;
 $yellow: #e6c446;
 $blue: #68d4ff;
 $magenta: #ffa3aa;
-$cyan: #36a3d9;
+$cyan: #171032;
 $white: #ffffff;
 * {
   all: unset;
@@ -24,3 +24,4 @@ $white: #ffffff;
 @import 'scss/network.scss';
 @import 'scss/control.scss';
 @import 'scss/info.scss';
+@import 'scss/battery.scss';

@@ -3,14 +3,185 @@
 (defpoll batteryvalue :interval "1s" "scripts/battery.sh")
 (defpoll temperture :interval "1s" "scripts/temperture.sh")
 
+(defwindow info1 
+            :monitor 0
+            :geometry (geometry :x "15%"
+                               :y 0
+                               :width "100%"
+                               :height 200
+                               :anchor "center")
+            :stacking "bg"
+            :exclusive true 
+            :focursable true 
+            (box :orientation "h"
+                :halign "center"
+                :valign "center"
+                :space-evenly false
+                (box
+                    :width 100
+                    :height 400
+                    :class "part1"
+                    :orientation "v"
+                    :space-evenly false
+                    :spacing 1
+                    :halign "center"
+                    :valign "center"
+                    (box 
+                     :height 100
+                     :class "part3" 
+                     (circular 
+                      :name "CPU" 
+                      :valueinfo {cpuvalue})
+                    )
+                    (box 
+                    :height 100
+                    :class "part3" 
+                    (circular 
+                     :name "RAM" 
+                     :valueinfo {ramvalue})
+                    )
+                    (box 
+                    :height 200
+                    :class "part3" 
+                    "hello")
+                )
+                (box 
+                    :width 500
+                    :height 400
+                    :class "part"
+                    :orientation "v"
+                    :space-evenly false
+                    :spacing 1
+                    (box 
+                    :height 100
+                    :class "part2" 
+                     :orientation "h"
+                     :space-evenly false
+                     :spacing 2
+                     :halign "center"
+                     :valign "center"
+                     (box
+                      :width 100
+                      (circular 
+                       :name "BATTERY" 
+                       :valueinfo {batteryvalue})
+                     )
+                     (box
+                      :width 400
+                       :class "boxesgraph"
+                       (overlay
+                        (graph
+                         :class "graphcpu"
+                         :value {cpuvalue}
+                         :thickness 4
+                         :time-range "20s"
+                         :min 0
+                         :max 100
+                         :dynamic true
+                         :line-style "round"
+                         :flip-x true
+                         :flip-y true
+                        )
+                        (label :text "CPU")
+                       )
+                     )
+                    )
+                    (box 
+                    :height 100
+                    :class "part2" 
+                     :orientation "h"
+                     :space-evenly false
+                     :spacing 2
+                     :halign "center"
+                     :valign "center"
+                     (box
+                      :width 400
+                       :class "boxesgraph"
+                       (overlay
+                        (graph
+                         :class "graphtemperture"
+                         :value {temperture}
+                         :thickness 4
+                         :time-range "20s"
+                         :min 0
+                         :max 100
+                         :dynamic true
+                         :line-style "round"
+                         :flip-x true
+                         :flip-y true
+                        )
+                        (label :text "TEMPERTURE")
+                       )
+                     )
+                     (box
+                      :width 100
+                      "hello"
+                     )
+                    )
+                    (box 
+                    :height 200
+                    :class "part2" 
+                    :orientation "v"
+                    (label
+                    :limit-width 20
+                    :lines 10
+                    :truncate true
+                    :show-truncated true
+                    :text "Helljiiiiiiiiiiiiiiiiiiiiiiiiiiiiiijppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp"
+                    )
+                    (label
+                    :limit-width 20
+                    :lines 10
+                    :truncate true
+                    :show-truncated true
+                    :text "Helljiiiiiiiiiiiiiiiiiiiiiiiiiiiiiijppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp"
+                    )
+                    (label
+                    :limit-width 20
+                    :lines 10
+                    :truncate true
+                    :show-truncated true
+                    :text "Helljiiiiiiiiiiiiiiiiiiiiiiiiiiiiiijppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp"
+                    )
+                    (label
+                    :limit-width 20
+                    :lines 10
+                    :truncate true
+                    :show-truncated true
+                    :text "Helljiiiiiiiiiiiiiiiiiiiiiiiiiiiiiijppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp"
+                    )
+                    (label
+                    :limit-width 20
+                    :lines 10
+                    :truncate true
+                    :show-truncated true
+                    :text "Helljiiiiiiiiiiiiiiiiiiiiiiiiiiiiiijppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp"
+                    )
+                    (label
+                    :limit-width 20
+                    :lines 10
+                    :truncate true
+                    :show-truncated true
+                    :text "Helljiiiiiiiiiiiiiiiiiiiiiiiiiiiiiijppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp"
+                    )
+                    )
+                )
+                (box
+                    :width 150
+                    :height 400
+                    :class "part1"
+                    :orientation "h"
+                )
+            )
+  )
 (defwindow info [] 
     :monitor 0
     :geometry (geometry :x 0
       :y 0
       :width "40%"
       :height "90%"
-      :anchor "top right")
-    :stacking "fg"
+      :anchor "center")
+    :stacking "bg"
     :exclusive false 
     (box
       :class "boxinfo"
@@ -100,25 +271,7 @@
             :height 90
             :start-at 37.5
             :thickness 15
-            "${valueinfo}%"
+            "${name} ${valueinfo}%"
         )
-        "${name}"
     )
-)
-(defwindow info_corner_top_left 
-  :stacking "fg"
-  :monitor 0
-  :geometry (geometry 
-              :x "40%"
-              :anchor "top right")
-  (box :class "infoCornerTL")  
-)
-
-(defwindow info_corner_bottom_right
-  :stacking "fg"
-  :monitor 0
-  :geometry (geometry 
-              :y "90%"
-              :anchor "top right")
-  (box :class "infoCornerBR")  
 )

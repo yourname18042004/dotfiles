@@ -2,12 +2,27 @@ return {
   "folke/noice.nvim",
   event = "VeryLazy",
   opts = {
+    cmdline = {
+      view = "cmdline_popup", -- Use a popup instead of the default bottom bar
+      format = {
+        cmdline = { 
+          pattern = "^:", 
+          icon = " ", 
+          lang = "vim", 
+          opts = { 
+            position = { row = "50%", col = "50%" }, 
+            size = { width = 60, height = "auto" }, 
+            border = { style = "rounded", padding = { 0, 1 } }, 
+          }
+        },
+      }
+    },
     lsp = {
       override = {
         ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
         ["vim.lsp.util.stylize_markdown"] = true,
         ["cmp.entry.get_documentation"] = true,
-      },
+      }, 
     },
     routes = {
       {

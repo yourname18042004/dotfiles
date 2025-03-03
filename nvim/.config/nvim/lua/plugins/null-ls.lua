@@ -9,6 +9,7 @@ return {
         null_ls.builtins.formatting.prettier.with({
           extra_args = { "--single-quote", "--jsx-single-quote" },
         }),
+        null_ls.builtins.formatting.dart_format,
       },
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then

@@ -1,34 +1,133 @@
-// Default Rofi Configuration
-rofi {
-    modi: "run,window,ssh";
-    terminal: "alacritty";
-    font: "Monospace 12";
-    background-color: #282828;
-    foreground-color: #ebdbb2;
-    border-radius: 10px;
-    border-width: 2px;
-    border-color: #458588;
-    location: 0; // Top-left position
-    padding: 5px;
-    width: 60%;
-    height: 30;
+// nvim: fdm=marker
+
+configuration {
+  modes: "window,drun,run,ssh";
+  font: "Hack Nerd Font SemiBold 17";
+  drun-display-format: "{name}";
+  cancel-action: "exit";
+}
+
+* {
+  // general
+  bg: #181a1f;
+  bgt: #16191ca6;
+  t: transparent;
+  fg: #9bb2bf;
+
+  selected-bg: @fg;
+  selected-fg: @bg;
+
+  // for windows
+  active: #5a687e;
+  urgent: #aa4f54;
 }
 
 window {
-    width: 50%;
-    height: 20;
-    border: 2px solid;
+  fullscreen: true;
+  padding: 35% 30%;       // you might want to ajust these to resize rofi.
+  transparency: "real";
+  background-color: @bgt;
+  border-color: @t;
+  blur: true;
 }
 
 listview {
-    lines: 10;
-    fixed-height: true;
+  border: 0 0 0 0;
+  padding: 40 10 0;
+  scrollbar: true;
 }
 
-modi {
-    run: "Run Application";
-    window: "Window Switcher";
-    ssh: "SSH Launcher";
+scrollbar {
+    width:        15px;
+    border-radius:       7px;
+    handle-color: @fg;
+    handle-width: 13px;
+    padding:      0 5;
 }
 
+entry {
+    placeholder: "";
+}
 
+// less interesting stuff {{{
+
+// using elements from:
+// https://github.com/bardisty/gruvbox-rofi/blob/master/gruvbox-common.rasi
+
+textbox {
+    text-color: @fg;
+}
+
+element {
+    border-radius:  7px;
+    padding: 8px;
+}
+element.normal.normal {
+    background-color: @t;
+    text-color:       @fg;
+}
+element.normal.urgent {
+    background-color: @t;
+    text-color:       @urgent;
+}
+element.normal.active {
+    background-color: @t;
+    text-color:       @active;
+}
+element.selected.normal {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+element.selected.urgent {
+    background-color: @selected-bg;
+    text-color:       @urgent;
+}
+element.selected.active {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+element.alternate.normal {
+    background-color: @t;
+    text-color:       @fg;
+}
+element.alternate.urgent {
+    background-color: @t;
+    text-color:       @urgent;
+}
+element.alternate.active {
+    background-color: @t;
+    text-color:       @active;
+}
+
+sidebar {
+    border:       2px 0 0;
+    border-color: @fg;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @fg;
+    padding:    2px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+
+case-indicator,
+entry,
+prompt,
+button {
+    spacing:    0;
+    text-color: @fg;
+}
+
+button.selected {
+    background-color: @bg;
+    text-color:       @fg;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @fg;
+    margin:     0 0.3em 0 0;
+}
+// }}}

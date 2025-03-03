@@ -1,0 +1,7 @@
+(defpoll pin :interval "1s" "scripts/battery.sh")
+(defwidget battery [] 
+    (box 
+        :class "battery"
+        :orientation "h"
+        "󰁹 ${pin}%"
+))

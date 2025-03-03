@@ -1,22 +1,26 @@
 .focused {
+  all: unset;
   font-family: 'Hack Nerd Font';
   box-shadow: 0 0 0 0rem;
   font-weight: bold;
-  color: #fe9dd7;
+  color: $blue;
 }
 .focused:hover {
+  all: unset;
   font-family: 'Hack Nerd Font';
   box-shadow: 0 0 0 0rem;
   font-weight: bold;
   color: #fcd872;
 }
 .visible {
+  all: unset;
   font-family: 'Hack Nerd Font';
   box-shadow: 0 0 0 0rem;
   font-weight: bold;
-  color: #fe9dd7;
+  color: $blue;
 }
 .visible:hover {
+  all: unset;
   font-family: 'Hack Nerd Font';
   box-shadow: 0 0 0 0rem;
   font-weight: bold;

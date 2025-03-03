@@ -30,7 +30,24 @@ keymap.set('i', '<C-h>', '<left>')
 keymap.set('i', '<C-k>', '<up>')
 keymap.set('i', '<C-j>', '<down>')
 keymap.set('i', '<C-l>', '<right>')
+-- Vô hiệu hóa phím mũi tên trong Normal mode
+vim.api.nvim_set_keymap("n", "<Up>", "<NOP>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Down>", "<NOP>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Left>", "<NOP>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Right>", "<NOP>", { noremap = true, silent = true })
 
+-- Vô hiệu hóa phím mũi tên trong Insert mode
+vim.api.nvim_set_keymap("i", "<Up>", "<NOP>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<Down>", "<NOP>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<Left>", "<NOP>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<Right>", "<NOP>", { noremap = true, silent = true })
+
+-- Vô hiệu hóa phím mũi tên trong Visual mode
+vim.api.nvim_set_keymap("v", "<Up>", "<NOP>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<Down>", "<NOP>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<Left>", "<NOP>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<Right>", "<NOP>", { noremap = true, silent = true })
+--
 --keymap.set( 'n', "<Tab>", "gt" )
 --keymap.set( 'n', "<S-Tab>", "gT" )
 
@@ -42,3 +59,10 @@ keymap.set('n', 'rsh', '<C-w><')
 keymap.set('n', 'rsl', '<C-w>>')
 keymap.set('n', 'rsk', '<C-w>+')
 keymap.set('n', 'rsj', '<C-w>-')
+
+vim.api.nvim_create_autocmd("TermOpen", {
+  pattern = "*",
+  callback = function()
+    vim.api.nvim_buf_set_keymap(0, "t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+  end,
+})

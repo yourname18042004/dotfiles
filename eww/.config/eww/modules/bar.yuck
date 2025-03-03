@@ -23,6 +23,8 @@
                       (clock)
                       (label :text "|")
                       (network)
+                      (label :text "|")
+                      (battery)
                     )
                 )
                 (box 
@@ -76,3 +78,4 @@
 (include "modules/phone.yuck")
 (include "modules/clock.yuck")
 (include "modules/network.yuck")
+(include "modules/battery.yuck")
