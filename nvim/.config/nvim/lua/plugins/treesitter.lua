@@ -5,16 +5,10 @@ return{
     local config = require("nvim-treesitter.configs")
     config.setup({
       ensure_installed = {
-                "lua", 
-                "javascript",
-                "typescript",
-                "http",
-                "css",
                 "json",
                 "c", 
                 "cpp", 
                 "c_sharp", 
-                "sql",
                 "dart",
       },
       highlight = { enable = true },

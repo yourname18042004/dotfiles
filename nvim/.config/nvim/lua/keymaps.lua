@@ -66,3 +66,15 @@ vim.api.nvim_create_autocmd("TermOpen", {
     vim.api.nvim_buf_set_keymap(0, "t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
   end,
 })
+
+-- Show error 
+keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+keymap.set('n', '<leader>ne', vim.diagnostic.goto_next)
+keymap.set('n', '<leader>pe', vim.diagnostic.goto_prev)
+
+--zen mode
+vim.keymap.set("n", "<leader>z", ":ZenMode<CR> & Twilight", { noremap = true, silent = true })
+
+-- move select 
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

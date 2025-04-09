@@ -25,5 +25,5 @@ fi
     fi
 
     # Đặt hình nền với hiệu ứng mờ dần (fade)
-    swww img "$IMAGE" --transition-type grow --transition-duration 2 &&  wal -i "$IMAGE" 
+    swww img "$IMAGE" --transition-type grow --transition-duration 2 --outputs eDP-1 && swww img "$IMAGE" --transition-type grow --transition-duration 2 --outputs HDMI-A-1 &&  wal -i "$IMAGE" 
 
