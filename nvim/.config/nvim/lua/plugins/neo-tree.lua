@@ -9,6 +9,15 @@ return {
   config = function()
     vim.keymap.set('n', '<C-e>', ':Neotree filesystem reveal right<CR>', {})
     require("neo-tree").setup({
+      event_handlers = {
+        {
+          event = "file_opened",
+          handler = function(file_path)
+            -- Tự động đóng neo-tree khi mở file
+            require("neo-tree.command").execute({ action = "close" })
+          end,
+        },
+      },
       filesystem = {
         filtered_items = {
           visible = true, -- Hiển thị các tệp ẩn

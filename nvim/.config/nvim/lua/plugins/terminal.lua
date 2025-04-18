@@ -10,7 +10,7 @@ return {
       shading_factor = '1',
       start_in_insert = true,
       persist_size = true,
-      direction = 'float',
+      direction = 'tab',
       auto_scroll = true,
       insert_mappings = true,
       terminal_mappings = true,

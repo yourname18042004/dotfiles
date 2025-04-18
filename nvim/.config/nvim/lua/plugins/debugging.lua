@@ -15,6 +15,14 @@ return {
       dapui.toggle()
     end, { desc = "Toggle DAP UI" })
 
+    vim.keymap.set("n", "<leader>dr", function()
+      dap.restart()
+    end, { desc = "DAP Restart" })
+
+    vim.keymap.set("n", "<leader>ds", function()
+      dap.terminate()
+    end, { desc = "DAP Stop" })
+
     dap.listeners.before.attach.dapui_config = function()
       dapui.open()
     end
