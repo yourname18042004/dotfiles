@@ -2,6 +2,20 @@
 
 This repository contains my personal dotfiles for a beautiful and functional Hyprland-based Wayland setup. It includes configuration files for terminal emulators, window manager, status bars, launchers, and more — with smooth animations and a minimal aesthetic.
 
+## 📷 Screenshots
+
+### Before config
+
+![before config](pictures/arch_linux.png)
+
+### After config
+
+![after config](pictures/home_screen.png)
+
+### Video
+
+[![Watch the video](pictures/home_screen.png)](https://youtu.be/ss338nzKyZc)
+
 ## 📁 Directory Structure
 
 - `alacritty/` — Configuration for the Alacritty terminal.
@@ -26,10 +40,6 @@ This repository contains my personal dotfiles for a beautiful and functional Hyp
 - ✅ Beautiful status bars using `eww` and `waybar`.
 - ✅ Developer-friendly Neovim config.
 - ✅ Dotfile management using **GNU Stow**.
-
-## 📷 Screenshots
-
-_(Insert screenshots here to showcase your setup)_
 
 ## 🛠 Requirements
 
